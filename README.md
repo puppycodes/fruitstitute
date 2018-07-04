@@ -59,7 +59,7 @@ Browser sync spawns a basic webserver with the webpack-dev-middleware injected.
 * [webpack-dev-middleware](https://github.com/webpack/webpack-dev-middleware): Triggers browser-sync when webpack files like scripts or styles change
 * [nodemon](https://github.com/remy/nodemon): Restarts dev server when build scripts or config changes
 
-### :bulb: Tipps & tricks
+### :bulb: Tips & tricks
 
 1. The dev server supports the `rs` command to restart the server manually
 2. The `metalsmith-helpers.js` in the scripts folder exports two metalsmith debugging plugins: A `StatisticsPlugin` for a general overview and a `DebugPlugin`
@@ -86,11 +86,3 @@ You can find your generated website in `./dist/site/`. See below how you can pre
 With `yarn deploy` (or `npm run deploy`) you can deploy your latest website directly to GitHub pages via [gh-pages](https://www.npmjs.com/package/gh-pages)
 
 Running `yarn server` (or `npm run server`) will spawn a simple production server which is great for testing the final version.
-
-## :sparkling_heart: Contributing
-
-This project follows the [standard](https://github.com/feross/standard) coding and the [conventional changelog](https://github.com/conventional-changelog/conventional-changelog-angular/blob/master/convention.md) commit message style. Also it is configured to never decrease the code coverage of its tests.
-
-
-Pull requests and stars are always welcome. For bugs and feature requests, [please create an issue](https://github.com/axe312ger/metalsmith-webpack-suite/issues/new).
-But before doing anything, please read the [CONTRIBUTING.md](./CONTRIBUTING.md) guidelines.
