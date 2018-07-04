@@ -6,19 +6,22 @@
 [![semantic-release](https://img.shields.io/badge/%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
-## :cloud: Installation
+## Installation
 
-Cloning the repo or downloading a release might be the best idea. This is a boilerplate, not a library.
-
-You may build on top of this project or extract parts you need for your own projects.
-
-Afterwards, simply install all dependencies by running:
+if you to play with yarn:
 
 ```js
-yarn || npm install
+yarn
 ```
 
-## :rocket: Technology
+or if your more of an NPM girl... 
+
+```js
+npm install
+```
+
+
+##  Tools
 
 
 ### metalsmith
@@ -28,16 +31,15 @@ yarn || npm install
 * [metalsmith-layouts](https://github.com/superwolff/metalsmith-layouts) to apply layouts
 
 
-### scripts and stylesheets via webpack
+### Webpack Middleware
 
 
-(actually [webpack-dev-middleware](https://github.com/webpack/webpack-dev-middleware)) under the hood for dev
-* Styles get included via require within `page.js` and extracted to a css file via [ExtractTextPlugin](https://github.com/webpack-contrib/extract-text-webpack-plugin)
+[webpack-dev-middleware](https://github.com/webpack/webpack-dev-middleware)... styles get included via require within `page.js` and extracted to a css file with [ExtractTextPlugin](https://github.com/webpack-contrib/extract-text-webpack-plugin)
 
-## :bookmark_tabs: Project File Structure
+##  File Structure
 |Pattern|Description|
 |-|-|
-|`./content/*` | website content files, mainly markdown files|
+|`./content/*` | content files, mainly markdown |
 |`./layouts/*.html` | [metalsmith-layouts](https://github.com/superwolff/metalsmith-layouts) layout files|
 |`./src/config/paths.js` | path configuration
 |`./src/assets/css,js` | page javascript and stylesheet files|
@@ -45,13 +47,22 @@ yarn || npm install
 |`./dist/assets/**/*` | webpack output directory|
 |`./dist/site/**/*` | metalsmith output directory|
 
-## :hammer_and_wrench: Development and tooling
+## Server
+Just run:
+  
+```
+yarn dev
+```
 
-You can start a fully featured development server via `yarn dev` (or `npm run dev`).
+or if you like...
 
-It will spawn a html server at `http://localhost:3000` including browser-sync for live reload.
+```
+npm run dev
+```
+this will spawn `http://localhost:3000` with browser-sync!
+<br>
 
-### :recycle: Live reload details
+### Live Reload
 
 Browser sync spawns a basic webserver with the webpack-dev-middleware injected.
 
@@ -59,16 +70,16 @@ Browser sync spawns a basic webserver with the webpack-dev-middleware injected.
 * [webpack-dev-middleware](https://github.com/webpack/webpack-dev-middleware): Triggers browser-sync when webpack files like scripts or styles change
 * [nodemon](https://github.com/remy/nodemon): Restarts dev server when build scripts or config changes
 
-### :bulb: Tips & tricks
+### Extras
 
 1. The dev server supports the `rs` command to restart the server manually
 2. The `metalsmith-helpers.js` in the scripts folder exports two metalsmith debugging plugins: A `StatisticsPlugin` for a general overview and a `DebugPlugin`
 3. The metalsmith-layouts config contains a little helper for handlebars to output variable content. Usage: `<pre>{{debug YOUR_VARIABLE}}</pre>` (Hint: use `this` as variable to debug display the whole file metadata)
 4. Check `npm run` for an overview of all available scripts.
 
-## :gear: Build process
+## Build
 
-You can run a fresh page build via `yarn build` (Or `npm run build`)
+You can run a fresh page build via `yarn build` (or `npm run build`)
 
 1. `npm-scripts`: Set `DEBUG` environment variable to `metalsmith*` to enable metalsmith debugging
 2. `npm-scripts`: Clean up `./dist/*` directories
@@ -79,10 +90,13 @@ You can run a fresh page build via `yarn build` (Or `npm run build`)
 7. `metalsmith`: Apply layouts
 8. `metalsmith`: Show statistics
 
-You can find your generated website in `./dist/site/`. See below how you can preview and deploy the result.
+everything generated in `./dist/site/`
 
-## :ship: Deployment & production server
+## Deploy
 
-With `yarn deploy` (or `npm run deploy`) you can deploy your latest website directly to GitHub pages via [gh-pages](https://www.npmjs.com/package/gh-pages)
+With `yarn deploy` (or `npm run deploy`) you can deploy to GitHub pages via [gh-pages](https://www.npmjs.com/package/gh-pages)
 
-Running `yarn server` (or `npm run server`) will spawn a simple production server which is great for testing the final version.
+Running `yarn server` (or `npm run server`) will spawn a production server so you can see how the deploy turned out!
+
+
+:peach:

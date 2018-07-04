@@ -1,5 +1,6 @@
 html {
-  font-family: sans-serif;
+  font-family: 'palatino';
+  text-transform: uppercase;
 
   &.no-js body::before {
     content: 'Javascript is disabled or not ready yet';

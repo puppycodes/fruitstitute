@@ -1,4 +1,4 @@
-// This is the actual metalsmith configuration script.
+// metalsmith configuration script.
 import Metalsmith from 'metalsmith'
 import markdown from 'metalsmith-markdownit'
 import layouts from 'metalsmith-layouts'
