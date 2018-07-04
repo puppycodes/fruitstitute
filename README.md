@@ -14,7 +14,7 @@ if you to play with yarn:
 yarn
 ```
 
-or if your more of an NPM girl... 
+or if your more of an NPM girl...
 
 ```js
 npm install
@@ -49,7 +49,7 @@ npm install
 
 ## Server
 Just run:
-  
+
 ```
 yarn dev
 ```
@@ -99,4 +99,4 @@ With `yarn deploy` (or `npm run deploy`) you can deploy to GitHub pages via [gh-
 Running `yarn server` (or `npm run server`) will spawn a production server so you can see how the deploy turned out!
 
 
-:peach:
+yay :peach:
