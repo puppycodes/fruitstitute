@@ -26,6 +26,9 @@ export default new Metalsmith(paths.projectRoot)
   }))
   .use(layouts({
     engine: 'handlebars',
+    partials: {
+      footer: 'partials/footer'
+    },
     default: 'default.html',
     // to avoid conflics, we match only html files
     pattern: '**/*.html',
